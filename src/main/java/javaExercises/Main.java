@@ -1,21 +1,19 @@
 package javaExercises;
 
+import java.sql.SQLOutput;
+
 public class Main {
 
     public static void main(String[] args) {
 
         StringExercises myString = new StringExercises();
-
-
         //Given a string name, e.g. "Bob", return a greeting of the form "Hello Bob!".
-
-        // name = "Bob" -> displays "Hello Bob!"
+        // name = "Bob" -> "Hello Bob!"
         System.out.println(myString.helloName("Bob"));
-        //name = "Alice" -> displays "Hello Alice!"
+        //name = "Alice" ->"Hello Alice!"
         System.out.println(myString.helloName("Alice"));
 
         //Given two strings, a and b, return the result of putting them together in the order abba.
-
         //makeAbba("Hi", "Bye") → "HiByeByeHi"
         System.out.println(myString.makeAbba("Hi", "Bye"));
         //makeAbba("Yo", "Alice") → "YoAliceAliceYo"
@@ -261,6 +259,153 @@ public class Main {
         System.out.println(myString.lastChars("","hello"));
         //lastChars("", "") → "@@"
         System.out.println(myString.lastChars("",""));
+
+        /*Given two strings, append them together (known as "concatenation") and return the result.
+         However, if the concatenation creates a double-char, then omit one of the chars*/
+        //conCat("abc", "cat") → "abcat"
+        System.out.println(myString.conCat("abc","cat"));
+        //conCat("dog", "cat") → "dogcat"
+        System.out.println(myString.conCat("dog","cat"));
+        //conCat("abc", "") → "abc"
+        System.out.println(myString.conCat("abc",""));
+        //conCat("", "cat") → "cat"
+        System.out.println(myString.conCat("","cat"));
+        //conCat("pig", "g") → "pig"
+        System.out.println(myString.conCat("pig","g"));
+
+
+        /*Given a string of any length, return a new string where the last 2 chars, if present, are swapped*/
+        //lastTwo("coding") → "codign"
+        System.out.println(myString.lastTwo("coding"));
+        //lastTwo("cat") → "cta"
+        System.out.println(myString.lastTwo("cat"));
+        //lastTwo("ab") → "ba"
+        System.out.println(myString.lastTwo("ab"));
+        //lastTwo("") → ""
+        System.out.println(myString.lastTwo(""));
+        //lastTwo("a") → "a"
+        System.out.println(myString.lastTwo("a"));
+
+        /*Given a string, if the string begins with "red" or "blue" return that color string,
+         otherwise return the empty string.*/
+        //seeColor("redxx") → "red"
+        System.out.println(myString.seeColor("redxx"));
+        //seeColor("xxred") → ""
+        System.out.println(myString.seeColor("xxred"));
+        //seeColor("blueTimes") → "blue"
+        System.out.println(myString.seeColor("blueTimes"));
+        //seeColor("NoColor") → ""
+        System.out.println(myString.seeColor("NoColor"));
+        //seeColor("red") → "red"
+        System.out.println(myString.seeColor("red"));
+        //seeColor("re") → ""
+        System.out.println(myString.seeColor("re"));
+        //seeColor("blu") → ""
+        System.out.println(myString.seeColor("blu"));
+        //seeColor("blue") → "blue"
+        System.out.println(myString.seeColor("blue"));
+        //seeColor("a") → ""
+        System.out.println(myString.seeColor("a"));
+
+        /*Given a string, return true if the first 2 chars in the string also appear at the end of the string*/
+       //frontAgain("edited") → true
+        System.out.println(myString.frontAgain("edited"));
+        //frontAgain("edit") → false
+        System.out.println(myString.frontAgain("edit"));
+        //frontAgain("ed") → true
+        System.out.println(myString.frontAgain("ed"));
+        //frontAgain("jjj") → true
+        System.out.println(myString.frontAgain("jjj"));
+        //frontAgain("jjjj") → true
+        System.out.println(myString.frontAgain("jjjj"));
+        //frontAgain("x") → false
+        System.out.println(myString.frontAgain("x"));
+        //frontAgain("") → false
+        System.out.println(myString.frontAgain(""));
+
+        /*Given two strings, append them together (known as "concatenation") and return the result.
+         However, if the strings are different lengths, omit chars from the longer string so it is the same length as the shorter string.*/
+        //minCat("Hello", "Hi") → "loHi"
+        System.out.println(myString.minCat("Hello","Hi"));
+        //minCat("Hello", "java") → "ellojava"
+        System.out.println(myString.minCat("Hello","java"));
+        //minCat("java", "Hello") → "javaello"
+        System.out.println(myString.minCat("java","Hello"));
+        //minCat("abc", "x") → "cx"
+        System.out.println(myString.minCat("abc","x"));
+        //minCat("abc", "") → ""
+        System.out.println(myString.minCat("abc",""));
+        //minCat("x", "abc") → "xc"
+        System.out.println(myString.minCat("x","abc"));
+
+        /*Given a string, return a new string made of 3 copies of the first 2 chars of the original string.
+         The string may be any length. If there are fewer than 2 chars, use whatever is there.*/
+        //extraFront("Hello") → "HeHeHe"
+        System.out.println(myString.extraFront("Hello"));
+        //extraFront("ab") → "ababab"
+        System.out.println(myString.extraFront("ab"));
+        //extraFront("") → ""
+        System.out.println(myString.extraFront(""));
+        //extraFront("H") → "HHH"
+        System.out.println(myString.extraFront("H"));
+
+        /*Given a string, if a length 2 substring appears at both its beginning and end, return a string without the substring at the beginning.
+         The substring may overlap with itself, so "Hi" yields "". Otherwise, return the original string unchanged.*/
+        //without2("HelloHe") → "lloHe"
+        System.out.println(myString.without2("HelloHe"));
+        //without2("HelloHi") → "HelloHi"
+        System.out.println(myString.without2("HelloHi"));
+        //without2("Hi") → ""
+        System.out.println(myString.without2("Hi"));
+        //without2("x") → "x"
+        System.out.println(myString.without2("x"));
+        //without2("") → ""
+        System.out.println(myString.without2(""));
+
+        /*Given a string, return a version without the first 2 chars. Except keep the first char if it is 'a' and keep the second char if it is 'b'.
+         The string may be any length.*/
+        //deFront("Hello") → "llo"
+        System.out.println(myString.deFront("Hello"));
+        //deFront("java") → "va"
+        System.out.println(myString.deFront("java"));
+        //deFront("away") → "aay"
+        System.out.println(myString.deFront("away"));
+        //deFront("abc") → "abc"
+        System.out.println(myString.deFront("abc"));
+        //deFront("xby") → "by"
+        System.out.println(myString.deFront("xby"));
+        //deFront("ba") → ""
+        System.out.println(myString.deFront("ba"));
+        //deFront("ab") → "ab"
+        System.out.println(myString.deFront("ab"));
+        //deFront("a") → ""
+        System.out.println(myString.deFront("a"));
+        //deFront("") → ""
+        System.out.println(myString.deFront(""));
+        //deFront("ax") → "a"
+        System.out.println(myString.deFront("ax"));
+
+        /*Given a string and a second "word" string, we'll say that the word matches the string if it appears at the front of the string, except its first char does not need to match exactly.
+        On a match, return the front of the string, or otherwise return the empty string.
+        So, so with the string "hippo" the word "hi" returns "hi" and "xip" returns "hip". The word will be at least length 1.*/
+        //startWord("hippo", "hi") → "hi"
+
+        //startWord("hippo", "xip") → "hip"
+        //startWord("hippo", "i") → "h"
+
+        /*Given a string, if the first or last chars are 'x', return the string without those 'x' chars, and otherwise return the string unchanged*/
+        //withoutX("xHix") → "Hi"
+        System.out.println(myString.withoutX("xHix"));
+        //withoutX("xHi") → "Hi"
+        System.out.println(myString.withoutX("xHi"));
+        //withoutX("Hxix") → "Hxi"
+        System.out.println(myString.withoutX("Hxix"));
+        //withoutX("Hi") → "Hi"
+        System.out.println(myString.withoutX("Hi"));
+        //withoutX("xxHi") → "xHi"
+        System.out.println(myString.withoutX("xxHi"));
+        //withoutX("Hix") → "Hi"
+        System.out.println(myString.withoutX("Hix"));
 
     }
 

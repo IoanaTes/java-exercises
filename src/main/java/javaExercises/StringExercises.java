@@ -119,27 +119,111 @@ public class StringExercises {
     }
 
     public String atFirst(String str) {
-        if(str.length() >= 2)
-            return str.substring(0,2);
-        if(str.length() == 1)
+        if (str.length() >= 2)
+            return str.substring(0, 2);
+        if (str.length() == 1)
             return str + "@";
         else
             return "@@";
     }
+
     public String lastChars(String a, String b) {
-        if(a.length() == 0)
+        if (a.length() == 0)
             a = "@";
-        if(b.length() == 0)
+        if (b.length() == 0)
             b = "@";
-        return a.substring(0,1) + b.substring(b.length()-1);
+        return a.substring(0, 1) + b.substring(b.length() - 1);
     }
+
     public String conCat(String a, String b) {
-        if(a.substring(a.length()-1) != b.substring(0,1))
+        if (a.length() == 0)
+            return b;
+        if (b.length() == 0)
+            return a;
+        char lastCharA = a.charAt(a.length() - 1);
+        char firstCharB = b.charAt(0);
+        if (lastCharA != firstCharB)
             return a.concat(b);
         else
-            return a.substring(0,a.length()-1).concat(b);
-
+            return a.concat(b.substring(1));
     }
+
+    public String lastTwo(String str) {
+        if (str.length() >= 2) {
+            String lastChar = str.substring(str.length() - 1);
+            String beforeTheLastChar = str.substring(str.length() - 2, str.length() - 1);
+            String swappedChars = lastChar.concat(beforeTheLastChar);
+            return str.substring(0, str.length() - 2) + swappedChars;
+        } else
+            return str;
+    }
+
+    public String seeColor(String str) {
+
+        if ((str.length() >= 3 && (str.substring(0, 3)).equals("red")))
+            return str.substring(0, 3);
+        else if ((str.length() >= 4 && (str.substring(0, 4)).equals("blue")))
+            return str.substring(0, 4);
+        else
+            return "";
+    }
+
+    public boolean frontAgain(String str) {
+        return (str.length() >= 2 && (str.substring(0, 2)).equals(str.substring(str.length() - 2)));
+    }
+
+    public String minCat(String a, String b) {
+        if (a.length() == b.length())
+            return a.concat(b);
+        else if (a.length() > b.length())
+            return (a.substring((a.length() - b.length())).concat(b));
+        else
+            return a.concat(b.substring((b.length() - a.length())));
+    }
+
+    public String extraFront(String str) {
+        String firstTwo;
+        if (str.length() >= 2) {
+            firstTwo = str.substring(0, 2);
+            return firstTwo + firstTwo + firstTwo;
+        } else
+            return str + str + str;
+    }
+    public String without2(String str) {
+        if(str.length() == 2 )
+            return "";
+        else if((str.length() > 2 && (str.substring(0,2)).equals(str.substring(str.length()-2))))
+            return (str.substring(2));
+        else
+            return str;
+    }
+    public String deFront(String str) {
+        if(str.length() < 2)
+            return "";
+        else if((str.charAt(0) == 'a') && (str.charAt(1) == 'b'))
+            return str;
+        else if(str.charAt(0) == 'a')
+            return str.charAt(0) +str.substring(2);
+        else if(str.charAt(1) == 'b')
+            return str.charAt(1) +str.substring(2);
+        else
+            return str.substring(2);
+    }
+    public String withoutX(String str) {
+        if(str.length() == 0)
+            return "";
+        String lastChar = str.substring(str.length()-1);
+        String firstChar = str.substring(0,1);
+        if(firstChar.equals("x") && lastChar.equals("x"))
+            return str.substring(1,str.length()-1);
+        else if(firstChar.equals("x"))
+            return str.substring(1);
+        else if(lastChar.equals("x"))
+            return str.substring(0,str.length()-1);
+        else
+            return str;
+    }
+
 
 
 
