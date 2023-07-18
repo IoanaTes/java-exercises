@@ -1,3 +1,4 @@
+package javaExercises;
 
 public class BooleanExercise {
 
