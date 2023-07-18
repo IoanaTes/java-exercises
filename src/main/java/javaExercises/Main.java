@@ -1,16 +1,14 @@
 package javaExercises;
 
-import java.sql.SQLOutput;
-
 public class Main {
 
     public static void main(String[] args) {
 
         StringExercises myString = new StringExercises();
         //Given a string name, e.g. "Bob", return a greeting of the form "Hello Bob!".
-        // name = "Bob" -> "Hello Bob!"
+        //helloName("Bob") na -> "Hello Bob!"
         System.out.println(myString.helloName("Bob"));
-        //name = "Alice" ->"Hello Alice!"
+        //helloName("Alice") ->"Hello Alice!"
         System.out.println(myString.helloName("Alice"));
 
         //Given two strings, a and b, return the result of putting them together in the order abba.
@@ -389,9 +387,17 @@ public class Main {
         On a match, return the front of the string, or otherwise return the empty string.
         So, so with the string "hippo" the word "hi" returns "hi" and "xip" returns "hip". The word will be at least length 1.*/
         //startWord("hippo", "hi") → "hi"
-
+        System.out.println(myString.startWord("hippo","hi"));
+        //startWord("hippo", "ix") → ""
+        System.out.println(myString.startWord("hippo","ix"));
         //startWord("hippo", "xip") → "hip"
+        System.out.println(myString.startWord("hippo","xip"));
+        //startWord("h", "ix") → ""
+        System.out.println(myString.startWord("h","ix"));
+        //startWord("", "i") → ""
+        System.out.println(myString.startWord("","i"));
         //startWord("hippo", "i") → "h"
+        System.out.println(myString.startWord("hippo","i"));
 
         /*Given a string, if the first or last chars are 'x', return the string without those 'x' chars, and otherwise return the string unchanged*/
         //withoutX("xHix") → "Hi"
@@ -407,6 +413,26 @@ public class Main {
         //withoutX("Hix") → "Hi"
         System.out.println(myString.withoutX("Hix"));
 
+        /*Given a string, if one or both of the first 2 chars is 'x', return the string without those 'x' chars,
+         and otherwise return the string unchanged.*/
+        //withoutX2("xHi") → "Hi"
+        System.out.println(myString.withoutX2("xHi"));
+        //withoutX2("Hxi") → "Hi"
+        System.out.println(myString.withoutX2("Hxi"));
+        //withoutX2("x") → ""
+        System.out.println(myString.withoutX2("x"));
+        //withoutX2("Hi") → "Hi"
+        System.out.println(myString.withoutX2("Hi"));
+        //withoutX2("xx") → ""
+        System.out.println(myString.withoutX2("xx"));
+        //withoutX2("xxHi") → "Hi"
+        System.out.println(myString.withoutX2("xxHi"));
+        //withoutX2("") → ""
+        System.out.println(myString.withoutX2(""));
+        //withoutX2("Hix") → "Hix"
+        System.out.println(myString.withoutX2("Hix"));
+        //withoutX2("xaxb") → "axb"
+        System.out.println(myString.withoutX2("xaxb"));
     }
 
 }

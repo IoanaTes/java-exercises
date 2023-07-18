@@ -132,7 +132,7 @@ public class StringExercises {
             a = "@";
         if (b.length() == 0)
             b = "@";
-        return a.substring(0, 1) + b.substring(b.length() - 1);
+        return a.charAt(0) + b.substring(b.length() - 1);
     }
 
     public String conCat(String a, String b) {
@@ -159,7 +159,6 @@ public class StringExercises {
     }
 
     public String seeColor(String str) {
-
         if ((str.length() >= 3 && (str.substring(0, 3)).equals("red")))
             return str.substring(0, 3);
         else if ((str.length() >= 4 && (str.substring(0, 4)).equals("blue")))
@@ -223,6 +222,22 @@ public class StringExercises {
         else
             return str;
     }
+    public String startWord(String str, String word) {
+        if(str.length() > 0 && str.substring(1).startsWith(word.substring(1)))
+            return str.charAt(0) + word.substring(1);
+        else
+            return "";
+    }
+    public String withoutX2(String str) {
+        if(str.length() > 1 && str.charAt(1) == 'x')
+            str = str.charAt(0) + str.substring(2);
+        if (str.length() > 0 && str.charAt(0) == 'x')
+            str = str.substring(1);
+        if(str.length() > 0 && str.charAt(0) == 'x')
+            str = str.substring(2);
+        return str;
+    }
+
 
 
 
