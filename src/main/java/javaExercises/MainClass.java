@@ -1,8 +1,5 @@
 package javaExercises;
 
-import java.sql.SQLOutput;
-import java.util.zip.DeflaterOutputStream;
-
 public class MainClass {
 
 
@@ -53,7 +50,7 @@ public class MainClass {
         The result getting the table is encoded as an int value with 0=no, 1=maybe, 2=yes.
         If either of you is very stylish, 8 or more, then the result is 2 (yes).
         With the exception that if either of you has style of 2 or less, then the result is 0 (no).
-        Otherwise the result is 1 (maybe).*/
+        Otherwise, the result is 1 (maybe).*/
         //dateFashion(5, 10) → 2
         System.out.println(myLogic.dateFashion(5,10));
         //dateFashion(8, 8) → 2
@@ -128,5 +125,151 @@ public class MainClass {
         //caughtSpeeding(86, true) → 1
         System.out.println(myLogic.caughtSpeeding(86, true));
 
+        /*Given 2 ints, a and b, return their sum. However, sums in the range 10..19 inclusive, are forbidden, so in that case just return 20.*/
+        //sortaSum(3, 4) → 7
+        System.out.println(myLogic.sortaSum(3,4));
+        //sortaSum(9, 4) → 20
+        System.out.println(myLogic.sortaSum(9,4));
+        //sortaSum(10, 11) → 21
+        System.out.println(myLogic.sortaSum(10,11));
+        //sortaSum(12, -3) → 9
+        System.out.println(myLogic.sortaSum(12,-3));
+
+        /*Given a day of the week encoded as 0=Sun, 1=Mon, 2=Tue, ...6=Sat, and a boolean indicating if we are on vacation,
+        return a string of the form "7:00" indicating when the alarm clock should ring. Weekdays, the alarm should be "7:00"
+        and on the weekend it should be "10:00".
+        Unless we are on vacation -- then on weekdays it should be "10:00" and weekends it should be "off".*/
+        //alarmClock(1, false) → "7:00"
+        System.out.println(myLogic.alarmClock(1,false));
+        //alarmClock(5, false) → "7:00"
+        System.out.println(myLogic.alarmClock(5,false));
+        //alarmClock(0, false) → "10:00"
+        System.out.println(myLogic.alarmClock(0,false));
+        //alarmClock(6, false) → "10:00"
+        System.out.println(myLogic.alarmClock(6,false));
+        //alarmClock(0, true) → "off"
+        System.out.println(myLogic.alarmClock(0,true));
+        //alarmClock(6, true) → "off"
+        System.out.println(myLogic.alarmClock(6,true));
+        //alarmClock(1, true) → "10:00"
+        System.out.println(myLogic.alarmClock(1,true));
+        //alarmClock(3, true) → "10:00"
+        System.out.println(myLogic.alarmClock(3,true));
+
+        /*We'll say a number is special if it is a multiple of 11 or if it is one more than a multiple of 11.
+         Return true if the given non-negative number is special.*/
+        //specialEleven(22) → true
+        System.out.println(myLogic.specialEleven(22));
+        //specialEleven(23) → true
+        System.out.println(myLogic.specialEleven(23));
+        //specialEleven(24) → false
+        System.out.println(myLogic.specialEleven(24));
+        //specialEleven(21) → false
+        System.out.println(myLogic.specialEleven(21));
+
+        /*Given a number n, return true if n is in the range 1..10, inclusive.
+        Unless outsideMode is true, in which case return true if the number is less or equal to 1,
+        or greater or equal to 10.*/
+        //in1To10(11, false) → false
+        System.out.println(myLogic.in1To10(11,false));
+        //in1To10(11, true) → true
+        System.out.println(myLogic.in1To10(11,true));
+        //in1To10(10, false) → true
+        System.out.println(myLogic.in1To10(10,false));
+        //in1To10(10, true) → true
+        System.out.println(myLogic.in1To10(10,true));
+        //in1To10(9, false) → true
+        System.out.println(myLogic.in1To10(9,false));
+        //in1To10(9, true) → false
+        System.out.println(myLogic.in1To10(9,true));
+
+        /*Return true if the given non-negative number is 1 or 2 more than a multiple of 20.*/
+        //more20(20) → false
+        System.out.println(myLogic.more20(20));
+        //more20(21) → true
+        System.out.println(myLogic.more20(21));
+        //more20(22) → true
+        System.out.println(myLogic.more20(22));
+        //more20(23) → false
+        System.out.println(myLogic.more20(23));
+        //more20(30) → false
+        System.out.println(myLogic.more20(30));
+        //more20(60) → false
+        System.out.println(myLogic.more20(60));
+
+        /*Return true if the given non-negative number is a multiple of 3 or 5, but not both.*/
+        //old35(3) → true
+        System.out.println(myLogic.old35(3));
+        //old35(5) → true
+        System.out.println(myLogic.old35(5));
+        //old35(10) → true
+        System.out.println(myLogic.old35(10));
+        //old35(9) → true
+        System.out.println(myLogic.old35(9));
+        //old35(15) → false
+        System.out.println(myLogic.old35(15));
+        //old35(30) → false
+        System.out.println(myLogic.old35(30));
+
+
+          /*Return true if the given non-negative number is 1 or 2 less than a multiple of 20.*/
+        //less20(18) → true
+        System.out.println(myLogic.less20(18));
+        //less20(19) → true
+        System.out.println(myLogic.less20(19));
+        //less20(20) → false
+        System.out.println(myLogic.less20(20));
+        //less20(21) → false
+        System.out.println(myLogic.less20(21));
+        //less20(22) → false
+        System.out.println(myLogic.less20(22));
+
+        /*Given a non-negative number "num", return true if num is within 2 of a multiple of 10.*/
+        //nearTen(8) → true
+        System.out.println(myLogic.nearTen(8));
+        //nearTen(9) → true
+        System.out.println(myLogic.nearTen(9));
+        //nearTen(10) → true
+        System.out.println(myLogic.nearTen(10));
+        //nearTen(11) → true
+        System.out.println(myLogic.nearTen(11));
+        //nearTen(12) → true
+        System.out.println(myLogic.nearTen(12));
+        //nearTen(13) → false
+        System.out.println(myLogic.nearTen(13));
+
+
+        /*Given 2 ints, a and b, return their sum. However, "teen" values in the range 13..19 inclusive, are extra lucky.
+        So if either value is a teen, just return 19.*/
+        //teenSum(3, 4) → 7
+        System.out.println(myLogic.teenSum(3,4));
+        //teenSum(10, 13) → 19
+        System.out.println(myLogic.teenSum(10,13));
+        //teenSum(13, 2) → 19
+        System.out.println(myLogic.teenSum(13,2));
+        //teenSum(3, 19) → 19
+        System.out.println(myLogic.teenSum(3,19));
+        //teenSum(13, 13) → 19
+        System.out.println(myLogic.teenSum(13,13));
+        //teenSum(10, 10) → 20
+        System.out.println(myLogic.teenSum(10,10));
+
+        /*Your cell phone rings. Return true if you should answer it. Normally you answer,
+        except in the morning you only answer if it is your mom calling.
+        In all cases, if you are asleep, you do not answer.*/
+        //answerCell(false, false, false) → true
+        System.out.println(myLogic.answerCell(false, false, false));
+        //answerCell(false, false, true) → false
+        System.out.println(myLogic.answerCell(false, false, true));
+        //answerCell(true, false, false) → false
+        System.out.println(myLogic.answerCell(true, false, false));
+        //answerCell(true, true, false) → true
+        System.out.println(myLogic.answerCell(true, true, false));
+        //answerCell(false, true, false) → true
+        System.out.println(myLogic.answerCell(false, true, false));
+        //answerCell(true, true, true) → false
+        System.out.println(myLogic.answerCell(true, true, true));
+
     }
+
 }
