@@ -1,5 +1,4 @@
 package javaExercises;
-
 public class MainClass {
 
 
@@ -499,6 +498,14 @@ public class MainClass {
         System.out.println(myLogic.sumLimit(11, 39));
         //sumLimit(11, 99) → 11
         System.out.println(myLogic.sumLimit(11, 99));
-    }
 
+        //While exercise
+        while(myLogic.tester())
+        {
+            System.out.println("running...");
+        }
+    }
 }
+
+
+

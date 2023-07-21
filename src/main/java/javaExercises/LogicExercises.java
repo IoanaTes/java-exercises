@@ -255,4 +255,10 @@ public class LogicExercises {
         else
             return 0;
     }
+
+    public boolean tester(){
+        double number = Math.random()*10;
+        return (int)number%2 == 0;
+    }
+
 }
