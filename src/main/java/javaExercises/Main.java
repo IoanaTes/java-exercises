@@ -2,7 +2,7 @@ package javaExercises;
 
 import java.util.Arrays;
 
-public class MainClass {
+public class Main {
 
     public static void main(String[] args) {
         ArrayExercises myArr = new ArrayExercises();
@@ -96,6 +96,22 @@ public class MainClass {
         System.out.println(Arrays.toString(myArr.middleWay(new int[]{7, 7, 7}, new int[]{3, 8, 0})));
         //middleWay([5, 2, 9], [1, 4, 5]) → [2, 4]
         System.out.println(Arrays.toString(myArr.middleWay(new int[]{5, 2, 9}, new int[]{1, 4, 5})));
+
+        //Given an int array length 2, return true if it contains a 2 or a 3.
+        //has23([2, 5]) → true
+        System.out.println(myArr.has23(new int[]{2,5}));
+        //has23([4, 3]) → true
+        System.out.println(myArr.has23(new int[]{4,3}));
+        //has23([4, 5]) → false
+        System.out.println(myArr.has23(new int[]{4,5}));
+
+        //Given an int array length 2, return true if it does not contain a 2 or 3.
+        //no23([4, 5]) → true
+        System.out.println(myArr.no23(new int[]{4,5}));
+        //no23([4, 2]) → false
+        System.out.println(myArr.no23(new int[]{4,2}));
+        //no23([3, 5]) → false
+        System.out.println(myArr.no23(new int[]{3,5}));
 
     }
 }

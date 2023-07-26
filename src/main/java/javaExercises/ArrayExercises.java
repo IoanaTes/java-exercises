@@ -84,6 +84,20 @@ public class ArrayExercises {
         newArr[1] = b[1];
         return newArr;
     }
+    public int[] makeEnds(int[] arr) {
+        int[] newArr = new int[2];
+        newArr[0] = arr[0];
+        newArr[1] = arr[arr.length-1];
+        return newArr;
+    }
+    public boolean has23(int[] arr) {
+        return (arr[0] == 2 || arr[0] == 3 || arr[1] == 3 || arr[1] == 2);
+    }
+    public boolean no23(int[] arr) {
+        return ((arr[0] != 2 && arr[0] != 3) && (arr[1] != 3 && arr[1] != 2));
+    }
+    
+
 
 
 
