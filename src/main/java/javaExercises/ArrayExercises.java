@@ -68,6 +68,24 @@ public class ArrayExercises {
         arr[0]=arr[1]=arr[2]=max;
         return arr;
     }
+    public int sum2(int[] arr) {
+        int sum;
+        if(arr.length < 1)
+            sum = 0;
+        else if(arr.length == 1)
+            sum = arr[0];
+        else
+            sum = arr[0] + arr[1];
+        return sum;
+    }
+    public int[] middleWay(int[] a, int[] b) {
+        int[] newArr = new int[2];
+        newArr[0] = a[1];
+        newArr[1] = b[1];
+        return newArr;
+    }
+
+
 
 
 

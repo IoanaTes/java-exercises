@@ -51,7 +51,7 @@ public class MainClass {
         //sum3([7, 0, 0]) → 7
         System.out.println(myArr.sum3(new int[]{7, 0, 0}));
 
-        //Given an array of ints length 3, return an array with the elements "rotated left" so {1, 2, 3} yields {2, 3, 1}.
+        //Given an array of ints length 3, return an array with the elements "rotated left".
         //rotateLeft3([1, 2, 3]) → [2, 3, 1]
         System.out.println(Arrays.toString(myArr.rotateLeft3(new int[]{1, 2, 3})));
         //rotateLeft3([5, 11, 9]) → [11, 9, 5]
@@ -59,6 +59,43 @@ public class MainClass {
         //rotateLeft3([7, 0, 0]) → [0, 0, 7]
         System.out.println(Arrays.toString(myArr.rotateLeft3(new int[]{7, 0, 0})));
 
+        //Given an array of ints length 3, return a new array with the elements in reverse order.
+        //reverse3([1, 2, 3]) → [3, 2, 1]
+        System.out.println(Arrays.toString(myArr.reverse3(new int[]{1, 2, 3})));
+        //reverse3([5, 11, 9]) → [9, 11, 5]
+        System.out.println(Arrays.toString(myArr.reverse3(new int[]{5, 11, 9})));
+        //reverse3([7, 0, 0]) → [0, 0, 7]
+        System.out.println(Arrays.toString(myArr.reverse3(new int[]{7, 0, 0})));
+
+        /*Given an array of ints length 3, figure out which is larger, the first or last element in the array,
+        and set all the other elements to be that value. Return the changed array.*/
+        //maxEnd3([1, 2, 3]) → [3, 3, 3]
+        System.out.println(Arrays.toString(myArr.maxEnd3(new int[]{1, 2, 3})));
+        //maxEnd3([11, 5, 9]) → [11, 11, 11]
+        System.out.println(Arrays.toString(myArr.maxEnd3(new int[]{11, 5, 9})));
+        //maxEnd3([2, 11, 3]) → [3, 3, 3]
+        System.out.println(Arrays.toString(myArr.maxEnd3(new int[]{2, 11, 3})));
+
+        /*Given an array of ints, return the sum of the first 2 elements in the array.
+        If the array length is less than 2, just sum up the elements that exist, returning 0 if the array is length 0.*/
+        //sum2([1, 2, 3]) → 3
+        System.out.println(myArr.sum2(new int[]{1,2,3}));
+        //sum2([1, 1]) → 2
+        System.out.println(myArr.sum2(new int[]{1,1}));
+        //sum2([1, 1, 1, 1]) → 2
+        System.out.println(myArr.sum2(new int[]{1,1,1,1}));
+        //sum2([1]) → 1
+        System.out.println(myArr.sum2(new int[]{1}));
+        //sum2([]) → 0
+        System.out.println(myArr.sum2(new int[]{}));
+        
+        //Given 2 int arrays, a and b, each length 3, return a new array length 2 containing their middle elements.
+        //middleWay([1, 2, 3], [4, 5, 6]) → [2, 5]
+        System.out.println(Arrays.toString(myArr.middleWay(new int[]{1, 2, 3}, new int[]{4, 5, 6})));
+        //middleWay([7, 7, 7], [3, 8, 0]) → [7, 8]
+        System.out.println(Arrays.toString(myArr.middleWay(new int[]{7, 7, 7}, new int[]{3, 8, 0})));
+        //middleWay([5, 2, 9], [1, 4, 5]) → [2, 4]
+        System.out.println(Arrays.toString(myArr.middleWay(new int[]{5, 2, 9}, new int[]{1, 4, 5})));
 
     }
 }
