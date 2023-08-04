@@ -97,6 +97,19 @@ public class Main {
         //middleWay([5, 2, 9], [1, 4, 5]) → [2, 4]
         System.out.println(Arrays.toString(myArr.middleWay(new int[]{5, 2, 9}, new int[]{1, 4, 5})));
 
+        //Given an array of ints, return a new array length 2 containing the first and last elements from the original array.
+        //The original array will be length 1 or more.
+        //makeEnds([1, 2, 3]) → [1, 3]
+        System.out.println(Arrays.toString(myArr.makeEnds(new int[]{1, 2, 3})));
+        //makeEnds([1, 2, 3, 4]) → [1, 4]
+        System.out.println(Arrays.toString(myArr.makeEnds(new int[]{1, 2, 3, 4})));
+        //makeEnds([7, 4, 6, 2]) → [7, 2]
+        System.out.println(Arrays.toString(myArr.makeEnds(new int[]{7, 4, 6, 2})));
+        //makeEnds([7, 4]) → [7, 4]
+        System.out.println(Arrays.toString(myArr.makeEnds(new int[]{7, 4})));
+        //makeEnds([7]) → [7, 7]
+        System.out.println(Arrays.toString(myArr.makeEnds(new int[]{7, 7})));
+
         //Given an int array length 2, return true if it contains a 2 or a 3.
         //has23([2, 5]) → true
         System.out.println(myArr.has23(new int[]{2, 5}));
@@ -243,18 +256,40 @@ public class Main {
         /*We'll say that a 1 immediately followed by a 3 in an array is an "unlucky" 1.
         Return true if the given array contains an unlucky 1 in the first 2 or last 2 positions in the array.*/
         //unlucky1([1, 3, 4, 5]) → true
-        System.out.println(myArr.unlucky1(new int[]{1,3,4,5}));
+        System.out.println(myArr.unlucky1(new int[]{1, 3, 4, 5}));
         //unlucky1([2, 1, 3, 4, 5]) → true
-        System.out.println(myArr.unlucky1(new int[]{2,1,3,4,5}));
+        System.out.println(myArr.unlucky1(new int[]{2, 1, 3, 4, 5}));
         //unlucky1([1, 1, 1]) → false
-        System.out.println(myArr.unlucky1(new int[]{1,1,1}));
+        System.out.println(myArr.unlucky1(new int[]{1, 1, 1}));
         //unlucky1([1, 3]) → true
-        System.out.println(myArr.unlucky1(new int[]{1,3}));
+        System.out.println(myArr.unlucky1(new int[]{1, 3}));
         //unlucky1([1, 4]) → false
-        System.out.println(myArr.unlucky1(new int[]{1,4}));
+        System.out.println(myArr.unlucky1(new int[]{1, 4}));
         //unlucky1([1]) → false
         System.out.println(myArr.unlucky1(new int[]{1}));
         //unlucky1([]) → false
         System.out.println(myArr.unlucky1(new int[]{}));
+
+        /*Given 2 int arrays, a and b, return a new array length 2 containing, as much as will fit, the elements from a followed by the elements from b.
+        The arrays may be any length, including 0, but there will be 2 or more elements available between the 2 arrays.*/
+        //make2([4, 5], [1, 2, 3]) → [4, 5]
+        System.out.println(Arrays.toString(myArr.make2(new int[]{4, 5}, new int[]{1, 2, 3})));
+        //make2([4], [1, 2, 3]) → [4, 1]
+        System.out.println(Arrays.toString(myArr.make2(new int[]{4}, new int[]{1, 2, 3})));
+        //make2([], [1, 2]) → [1, 2]
+        System.out.println(Arrays.toString(myArr.make2(new int[]{}, new int[]{1, 2})));
+
+        /*Given 2 int arrays, a and b, of any length, return a new array with the first element of each array.
+        If either array is length 0, ignore that array.*/
+        //front11([1, 2, 3], [7, 9, 8]) → [1, 7]
+        System.out.println(Arrays.toString(myArr.front11(new int[]{1, 2, 3}, new int[]{7, 9, 8})));
+        //front11([1], [2]) → [1, 2]
+        System.out.println(Arrays.toString(myArr.front11(new int[]{1}, new int[]{2})));
+        //front11([1, 7], []) → [1]
+        System.out.println(Arrays.toString(myArr.front11(new int[]{1, 7}, new int[]{})));
+        //front11([], [2, 8]) → [2]
+        System.out.println(Arrays.toString(myArr.front11(new int[]{}, new int[]{2, 8})));
+        //front11([], []) → []
+        System.out.println(Arrays.toString(myArr.front11(new int[]{}, new int[]{})));
     }
 }

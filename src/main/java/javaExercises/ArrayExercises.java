@@ -1,4 +1,7 @@
 package javaExercises;
+
+import java.util.Arrays;
+
 public class ArrayExercises {
 
     final int[] arrControl = {2, 7, 9, 1, 4, 6, 3, 5, 8, 2, 7, 9};
@@ -213,13 +216,42 @@ public class ArrayExercises {
         } else
             return a;
     }
+
     public boolean unlucky1(int[] a) {
         int unlucky = 0;
-        if(a.length >= 2)
-            if((a[0] == 1 && a[1] == 3)||(a[1] == 1 && a[2] == 3)||(a[a.length-2] == 1 && a[a.length-1] == 3))
+        if (a.length >= 2)
+            if ((a[0] == 1 && a[1] == 3) || (a[1] == 1 && a[2] == 3) || (a[a.length - 2] == 1 && a[a.length - 1] == 3))
                 unlucky++;
         return unlucky == 1;
     }
+
+    public int[] make2(int[] a, int[] b) {
+        int[] newArr = new int[2];
+        if (a.length == 0)
+            newArr = b;
+        else if (a.length == 1) {
+            newArr = Arrays.copyOf(a, 2);
+            newArr[1] = b[0];
+        } else {
+            newArr = Arrays.copyOf(a, 2);
+        }
+        return newArr;
+    }
+
+    public int[] front11(int[] a, int[] b) {
+        int[] newArr = new int[2];
+        if (a.length > 0 && b.length > 0) {
+            newArr[0] = a[0];
+            newArr[1] = b[0];
+        } else if (a.length == 0 && b.length == 0)
+            newArr = Arrays.copyOf(b, 0);
+        else if (a.length == 0)
+            newArr = Arrays.copyOf(b, 1);
+        else
+            newArr = Arrays.copyOf(a, 1);
+        return newArr;
+    }
+
 
 }
 
