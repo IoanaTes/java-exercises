@@ -1,5 +1,6 @@
 package oopExercises;
 
+
 public class Main {
 
     public static void main(String[] args) {
@@ -9,7 +10,6 @@ public class Main {
         Ship anotherShip = new Ship(5, 1);
         Ship myPositiveShip = new Ship(36, 10);
         Ship myNegativeShip = new Ship(35, 10);
-
         System.out.println(titanic.isWorthIt()); //false
         System.out.println(cruiseShip.isWorthIt()); //true
         System.out.println(anotherShip.isWorthIt()); //false
