@@ -2,7 +2,7 @@ package oopExercisesPartFour;
 
 import java.util.ArrayList;
 
-public class MobilePhone{
+public class MobilePhone {
     private String myNumber;
     private ArrayList<Contact> myContacts;
 
@@ -12,22 +12,31 @@ public class MobilePhone{
     }
 
     public boolean addNewContact(Contact contact) {
-        for (Contact myContact : myContacts)
-            if (myContact.equals(contact))
-                return false;
-            else
-                myContacts.add(contact);
-        return true;
+        if (findContact(contact) == -1) {
+            myContacts.add(contact);
+            System.out.println(myContacts.get(findContact(contact)).getName());
+            System.out.println(myContacts.get(findContact(contact)).getPhoneNumber());
+            return true;
+        } else
+            return false;
     }
 
-    public boolean updateNewContact(Contact contact, Contact newContact) {
-        for (int i = 0; i < myContacts.size(); i++)
-            if (myContacts.get(i).equals(contact)) {
-                myContacts.set(i, newContact);
-                return true;
-            }
-        return false;
+    public boolean updateContact(Contact contact, Contact newContact) {
+        if (findContact(contact) != -1) {
+            myContacts.set(findContact(contact), newContact);
+            return true;
+        } else
+            return false;
     }
+
+    public boolean removeContact(Contact contact) {
+        if (findContact(contact) != -1) {
+            myContacts.remove(findContact(contact));
+            return true;
+        } else
+            return false;
+    }
+
 
     public int findContact(Contact contact) {
         for (int i = 0; i < myContacts.size(); i++)
@@ -35,20 +44,24 @@ public class MobilePhone{
                 return i;
         return -1;
     }
-    public int findContact(String s){
+
+    public int findContact(String s) {
         for (int i = 0; i < myContacts.size(); i++)
-            if (myContacts.get(i).toString().equals(s))
+            if (myContacts.get(i).getName().equals(s) || myContacts.get(i).getPhoneNumber().equals(s))
                 return i;
         return -1;
     }
-    public Contact queryContact(String s){
+
+    public Contact queryContact(String s) {
         for (int i = 0; i < myContacts.size(); i++)
-            if (myContacts.get(i).toString().equals(s))
+            if (myContacts.get(i).getName().equals(s))
                 return myContacts.get(i);
-            return null;
+        return null;
     }
-    public void printContacts(){
+
+    public void printContacts() {
+        System.out.println("Contact List:");
         for (int i = 0; i < myContacts.size(); i++)
-            System.out.println(myContacts.get(i).getName() + " -> " + myContacts.get(i).getPhoneNumber());
+            System.out.println((i + 1) + ". " + myContacts.get(i).getName() + " -> " + myContacts.get(i).getPhoneNumber());
     }
 }
