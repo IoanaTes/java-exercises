@@ -1,4 +1,5 @@
-package oopExercisesPartThree;
+package oopExercisesPartThree.allOOP;
+
 public class DeluxeBurger extends Hamburger {
     public DeluxeBurger(){
         super(14.54,"Deluxe","Sausage & Beacon", "White Roll" );

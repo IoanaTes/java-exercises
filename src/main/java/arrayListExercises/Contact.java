@@ -1,4 +1,4 @@
-package oopExercisesPartFour;
+package arrayListExercises;
 
 public class Contact {
     private String name;

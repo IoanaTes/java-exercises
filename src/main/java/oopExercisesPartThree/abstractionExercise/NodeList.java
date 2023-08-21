@@ -1,4 +1,6 @@
-package oopExercisesPartThree;
+package oopExercisesPartThree.abstractionExercise;
+
+import oopExercisesPartThree.abstractionExercise.ListItem;
 
 interface NodeList {
     ListItem getRoot();

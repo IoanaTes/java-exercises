@@ -1,4 +1,4 @@
-package oopExercisesPartTwo;
+package oopExercisesPartTwo.encapsulationExercise;
 
 public class Printer {
     private int tonerLevel;

@@ -1,5 +1,9 @@
 package oopExercisesPartThree;
 
+import oopExercisesPartThree.allOOP.DeluxeBurger;
+import oopExercisesPartThree.allOOP.Hamburger;
+import oopExercisesPartThree.allOOP.HealthyBurger;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;

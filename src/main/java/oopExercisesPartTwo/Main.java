@@ -1,5 +1,12 @@
 package oopExercisesPartTwo;
 
+import oopExercisesPartTwo.compositionExercise.*;
+import oopExercisesPartTwo.encapsulationExercise.Printer;
+import oopExercisesPartTwo.polymorphismExercise.Car;
+import oopExercisesPartTwo.polymorphismExercise.Ford;
+import oopExercisesPartTwo.polymorphismExercise.Holden;
+import oopExercisesPartTwo.polymorphismExercise.Mitsubishi;
+
 public class Main {
     public static void main(String[] args) {
 

@@ -1,4 +1,4 @@
-package oopExercisesPartThree;
+package oopExercisesPartThree.allOOP;
 
 public class Hamburger {
     private double price;

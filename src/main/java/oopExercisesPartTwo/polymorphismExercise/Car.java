@@ -1,4 +1,4 @@
-package oopExercisesPartTwo;
+package oopExercisesPartTwo.polymorphismExercise;
 
 public class Car {
     private boolean engine = true;

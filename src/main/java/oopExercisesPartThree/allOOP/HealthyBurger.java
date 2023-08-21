@@ -1,6 +1,8 @@
-package oopExercisesPartThree;
+package oopExercisesPartThree.allOOP;
 
-public class HealthyBurger extends Hamburger{
+import oopExercisesPartThree.allOOP.Hamburger;
+
+public class HealthyBurger extends Hamburger {
     private String healthyExtra1Name;
     private double healthyExtra1Price;
     private String healthyExtra2Name;

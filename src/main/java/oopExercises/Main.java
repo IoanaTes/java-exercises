@@ -1,6 +1,14 @@
 package oopExercises;
 
 
+import oopExercises.carpetCostCalculator.Calculator;
+import oopExercises.carpetCostCalculator.Carpet;
+import oopExercises.carpetCostCalculator.Floor;
+import oopExercises.cylinderCircleExercise.Circle;
+import oopExercises.cylinderCircleExercise.Cylinder;
+import oopExercises.poolArea.Cuboid;
+import oopExercises.poolArea.Rectangle;
+
 public class Main {
 
     public static void main(String[] args) {

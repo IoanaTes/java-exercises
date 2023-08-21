@@ -1,4 +1,6 @@
-package oopExercisesPartThree;
+package oopExercisesPartThree.abstractionExercise;
+
+import oopExercisesPartThree.abstractionExercise.ListItem;
 
 public class Node extends ListItem {
     protected Node(Object value) {

@@ -1,4 +1,4 @@
-package oopExercisesPartTwo;
+package oopExercisesPartTwo.compositionExercise;
 
 public class Wall {
     private String direction;

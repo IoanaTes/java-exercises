@@ -1,4 +1,7 @@
-package oopExercises;
+package oopExercises.carpetCostCalculator;
+
+import oopExercises.carpetCostCalculator.Carpet;
+import oopExercises.carpetCostCalculator.Floor;
 
 public class Calculator {
     private Floor floor;

@@ -1,4 +1,4 @@
-package oopExercisesPartTwo;
+package oopExercisesPartTwo.compositionExercise;
 
 public class Bed {
     private String style;

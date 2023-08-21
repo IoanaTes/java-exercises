@@ -1,10 +1,12 @@
-package oopExercises;
+package oopExercises.poolArea;
 
-public class Cylinder extends Circle {
+import oopExercises.poolArea.Rectangle;
+
+public class Cuboid extends Rectangle {
     private double height;
 
-    public Cylinder(double radius, double height) {
-        super(radius);
+    public Cuboid(double width, double length, double height) {
+        super(width, length);
         if (height < 0)
             this.height = 0;
         else
@@ -18,6 +20,4 @@ public class Cylinder extends Circle {
     public double getVolume() {
         return getArea() * height;
     }
-
-
 }

@@ -1,6 +1,8 @@
-package oopExercisesPartTwo;
+package oopExercisesPartTwo.polymorphismExercise;
 
-public class Ford extends Car{
+import oopExercisesPartTwo.polymorphismExercise.Car;
+
+public class Ford extends Car {
 
     public Ford(int cylinders, String name) {
         super(cylinders, name);

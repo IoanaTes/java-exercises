@@ -1,4 +1,4 @@
-package oopExercises;
+package oopExercises.poolArea;
 
 public class Rectangle {
     private double width;

@@ -1,4 +1,4 @@
-package oopExercises;
+package oopExercises.cylinderCircleExercise;
 
 public class Circle {
     private double radius;

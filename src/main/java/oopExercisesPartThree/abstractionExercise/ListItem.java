@@ -1,4 +1,4 @@
-package oopExercisesPartThree;
+package oopExercisesPartThree.abstractionExercise;
 
 
 public abstract class ListItem {
